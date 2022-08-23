@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:learn_prov/font_stmt/font_home.dart';
-import 'package:learn_prov/font_stmt/setting_provider.dart';
-import 'package:provider/provider.dart';
+import 'package:learn_prov/add_card/product_list.dart';
 
   void main() {
   runApp(const MyApp());
@@ -12,16 +10,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => Setting(),
-      child: MaterialApp(
-        title: 'Flutter Demo',
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: FontHomePage(),
+    return MaterialApp(
+      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      home: ProductListScreen(),
     );
   }
 }
